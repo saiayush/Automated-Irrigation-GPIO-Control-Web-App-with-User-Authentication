@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Control</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .valve-on {
+            background-color: #4caf50 !important; /* Green */
+        }
+        .valve-off {
+            background-color: #da4242 !important; /* Maroon */
+        }
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        .home-button {
+            background-color: #2196F3;
+        }
+        .home-button:hover {
+            background-color: #1e87f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual Control</h1>
+    {% for button, state in button_states.items() %}
+        <form action="{{ url_for('toggle_manual', button=button) }}" method="get">
+            <button type="submit" class="{% if state %}valve-on{% else %}valve-off{% endif %}" {% if not manual_mode_enabled %}disabled{% endif %}>
+                {% if state %}Valve {{ button }} ON{% else %}Valve {{ button }} OFF{% endif %}
+            </button>
+        </form>
+    {% endfor %}
+    <a href="{{ url_for('home') }}"><button class="home-button">Back to Home</button></a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+    "button_times": {
+        "1": 4,
+        "2": 2,
+        "3": 3,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2
+    },
+    "automation_status": true,
+    "button_flags": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": false,
+        "5": false,
+        "6": false,
+        "7": false,
+        "8": false
+    }
+}

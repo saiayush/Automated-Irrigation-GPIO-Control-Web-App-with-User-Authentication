@@ -1,0 +1,20 @@
+{
+  "users": {
+    "user1": {
+      "password": "12345",
+      "security_answers": [
+        "fluffy",
+        "new york",
+        "blue"
+      ]
+    },
+    "user2": {
+      "password": "password2",
+      "security_answers": [
+        "School123",
+        "Mother",
+        "Book"
+      ]
+    }
+  }
+}

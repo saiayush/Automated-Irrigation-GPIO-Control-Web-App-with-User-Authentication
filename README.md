@@ -40,7 +40,7 @@ This project is a **web-based automation system** for controlling GPIO pins on a
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/<your-username>/friendlyarm-gpio-automation.git
+    git clone https://github.com/saiayush/friendlyarm-gpio-automation.git
     cd friendlyarm-gpio-automation
     ```
 
